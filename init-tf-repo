@@ -1,0 +1,19 @@
+#!/bin/bash
+
+export AWS_REGION="us-east-2"
+export AWS_PROFILE="linuxtips"
+REPO="containers-$1"
+
+mkdir -p $REPO/environment/{dev,prod}
+cp containers-vpc/{backend,providers,variables}.tf $REPO/ &&
+cp containers-vpc/environment/dev/{backend,terraform}.tfvars $REPO/environment/dev/
+sed -i s/vpc/CHANGEME/g $REPO/environment/dev/backend.tfvars
+
+cd $REPO && \
+touch {data,output,parameters,providers,variables}.tf && \
+touch environment/{dev,prod}/{terraform,backend}.tfvars
+
+
+
+
+

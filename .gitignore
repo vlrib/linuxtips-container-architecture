@@ -1,0 +1,30 @@
+# Arquivos de estado locais do Terraform
+terraform.tfstate
+terraform.tfstate.*
+
+# Logs de crash do Terraform
+crash.log
+
+# Backup de estado do Terraform
+*.tfstate.backup
+*.tfstate.backup.*
+
+# Ignorar todos os arquivos .tfvars em qualquer diretório
+**/*.tfvars
+
+# Diretório de dados do Terraform
+.terraform/
+.terraform.tfstate.lock.info
+
+# Arquivos de override do Terraform
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Planos de execução do Terraform
+*.tfplan
+
+# Arquivos de configuração locais do Terraform
+.terraformrc
+terraform.rc
